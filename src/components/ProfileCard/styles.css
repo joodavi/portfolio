@@ -3,7 +3,7 @@ body {
 }
 
 .card {
-  background: #333;
+  background: linear-gradient(180deg, #333, #444);
   display: flex;
   margin: 0 auto;
   margin-top: 40px;
@@ -15,7 +15,6 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  height: 200px;
   padding: 20px;
   padding-top: 0;
   width: 100%;
@@ -41,28 +40,84 @@ body {
   color: #fafafa;
 }
 
+.card .information .phrases {
+  background: #797979;
+  border-radius: 4px;
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.card .information .phrases .portuguese {
+  color: #313131;
+  font-weight: 200;
+  margin-top: 4px;
+}
+
+
 .card .contact {
   background: #3f3f3f;
   border-radius: 4px;
   box-shadow: 0px 8px 19px 3px #00000078;
-  margin-top: 6px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  margin: auto 0;
   padding: 10px;
 }
 
 .card .contact .email,
-.card .contact .linkedin {
+.card .contact .linkedin,
+.card .contact .github {
+  cursor: pointer;
   display: flex;
   justify-content: space-between;
+  transition: .3s;
 }
 
-.card .contact .email p,
+.card .contact .email:hover,
+.card .contact .linkedin:hover,
+.card .contact .github:hover {
+  opacity: .8;
+}
+
+/* .card .contact .email p,
 .card .contact .linkedin a {
   color: #fff;
   text-decoration: none;
-}
+} */
 
 .card .contact .email .envelope-email,
-.card .contact .linkedin .linkedin-icon {
+.card .contact .linkedin .linkedin-icon,
+.card .contact .github .github-icon {
   border-radius: 0;
   width: 50px;
+}
+
+@media (max-width: 800px) {
+  .card {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .card .information {
+    flex-direction: column;
+  }
+
+  .card .information .personal-information {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .card .information .personal-information .phrases {
+    text-align: left;
+  }
+
+  .card .information .contact {
+    flex-direction: row;
+    margin-top: 10px;
+  }
+
 }
