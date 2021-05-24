@@ -1,0 +1,68 @@
+body {
+  background: #000;
+}
+
+.card {
+  background: #333;
+  display: flex;
+  margin: 0 auto;
+  margin-top: 40px;
+  padding: 20px;
+  width: 80%;
+}
+
+.card .information {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 200px;
+  padding: 20px;
+  padding-top: 0;
+  width: 100%;
+}
+
+.card img {
+  border-radius: 12px;
+  width: 245px;
+}
+
+.card .personal-information {
+  color: #fff;
+  padding-top: 0;
+  text-align: left;
+}
+
+.card .personal-information .name {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.card .personal-information .occupation {
+  color: #fafafa;
+}
+
+.card .contact {
+  background: #3f3f3f;
+  border-radius: 4px;
+  box-shadow: 0px 8px 19px 3px #00000078;
+  margin-top: 6px;
+  padding: 10px;
+}
+
+.card .contact .email,
+.card .contact .linkedin {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card .contact .email p,
+.card .contact .linkedin a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.card .contact .email .envelope-email,
+.card .contact .linkedin .linkedin-icon {
+  border-radius: 0;
+  width: 50px;
+}
